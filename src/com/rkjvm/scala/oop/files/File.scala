@@ -4,7 +4,7 @@ import java.nio.file.FileSystemException
 
 import com.rkjvm.scala.oop.filesystem.FilesystemException
 
-class File(override val parentPath: String, override val name: String, content: String)
+class File(override val parentPath: String, override val name: String, val contents: String)
   extends DirEntry(parentPath, name) {
 
   override def asDirectory: Directory =
@@ -19,7 +19,7 @@ class File(override val parentPath: String, override val name: String, content: 
     new File(parentPath, name, newContents)
 
   def appendContents(newContents: String): File =
-    setContents(content + "\n" + newContents)
+    setContents(contents + "\n" + newContents)
 }
 
 object File {

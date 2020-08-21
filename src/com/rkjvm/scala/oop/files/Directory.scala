@@ -1,7 +1,6 @@
 package com.rkjvm.scala.oop.files
 
 import com.rkjvm.scala.oop.filesystem.FilesystemException
-import com.sun.media.sound.DirectAudioDeviceProvider
 
 import scala.annotation.tailrec
 
